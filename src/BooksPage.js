@@ -28,8 +28,8 @@ const BooksPage = ({ books ,updateBookStatues}) => {
       </div>
       <div className="list-books-content">
         {shelfNames.map((shelfName) => (
-          <div className="bookshelf">
-            <h2 className="bookshelf-title">{shelfName}</h2>
+          <div key={shelfName} className="bookshelf">
+            <h2  className="bookshelf-title">{shelfName}</h2>
             <div className="bookshelf-books">
 
               
@@ -45,7 +45,7 @@ const BooksPage = ({ books ,updateBookStatues}) => {
 
                 }            
                 return  (
-                  <CreateBook book={book} updateBookStatues={updateBookStatues} Flag={'booksPage'} thumb={thumb} books={books}/>
+                  <CreateBook key={book.id} book={book} updateBookStatues={updateBookStatues} Flag={'booksPage'} thumb={thumb} books={books}/>
                 )
                 })}
               </ol>

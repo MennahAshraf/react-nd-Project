@@ -1,11 +1,10 @@
 import SelectOptions from "./SelectOptions"
 
 const CreateBook = ({book,updateBookStatues,Flag,books,thumb})=>{
-  let key = `${book.id}${Flag}${book.shelf}`
-  console.log(key)
+  // let key = `${book.id}${Flag}${book.shelf}`
   
     return (
-        <li key={key}>
+        <li>
                     <div className="book">
                       <div className="book-top">
                         <div
