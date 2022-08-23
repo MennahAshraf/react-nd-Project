@@ -45,7 +45,7 @@ const BooksPage = ({ books ,updateBookStatues}) => {
 
                 }            
                 return  (
-                  <CreateBook book={book} updateBookStatues={updateBookStatues} searchFlag={false} thumb={thumb} books={books}/>
+                  <CreateBook book={book} updateBookStatues={updateBookStatues} Flag={'booksPage'} thumb={thumb} books={books}/>
                 )
                 })}
               </ol>

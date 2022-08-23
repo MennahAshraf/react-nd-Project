@@ -99,7 +99,6 @@ function App() {
 
 App.propTypes={
   books:PropTypes.array,
-  books:PropTypes.array.isRequired,
   updateBookStatues:PropTypes.func,
   
 }

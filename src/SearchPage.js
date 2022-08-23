@@ -60,7 +60,7 @@ const SearchPage = ({updateBookStatues,books})=>{
                   
               return    (
                   
-                <CreateBook book={book} updateBookStatues={updateBookStatues} searchFlag={true} thumb={thumb} books={books}/>
+                <CreateBook book={book} updateBookStatues={updateBookStatues} Flag={'searchPage'} thumb={thumb} books={books}/>
                 )})}
           </ol>
         </div>

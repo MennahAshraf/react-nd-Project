@@ -1,12 +1,12 @@
 
 
-const SelectOptions=({statues,book,updateBookStatues,searchFlag,books})=>{
+const SelectOptions=({statues,book,updateBookStatues,Flag,books})=>{
 
-       if (searchFlag){
+       if (Flag==='searchPage'){
         if(books.find(item => item.id === book.id )) {
 
             let index= books.findIndex(item => item.id === book.id )
-            searchFlag=!searchFlag
+            Flag='booksPage'
             statues=books[index].shelf
 
         }
@@ -15,7 +15,7 @@ const SelectOptions=({statues,book,updateBookStatues,searchFlag,books})=>{
     
     const handleOnChange = (e)=>{
         e.preventDefault()
-        if(searchFlag){}
+        
         updateBookStatues(book,e.target.value)
     }
 
@@ -25,7 +25,7 @@ const SelectOptions=({statues,book,updateBookStatues,searchFlag,books})=>{
 
        
         <div className="book-shelf-changer">
-                            {  searchFlag && (
+                            {  Flag==='searchPage' && (
                                 <select value={'none'} onChange={handleOnChange}>
                                 <option value="moveTo" disabled>
                                   Move to...

@@ -1,8 +1,10 @@
 import SelectOptions from "./SelectOptions"
 
-const CreateBook = ({book,updateBookStatues,searchFlag,books,thumb})=>{
+const CreateBook = ({book,updateBookStatues,Flag,books,thumb})=>{
+  let key = `${book.id}${Flag}`
+  
     return (
-        <li key={book.id}>
+        <li key={key}>
                     <div className="book">
                       <div className="book-top">
                         <div
@@ -15,7 +17,7 @@ const CreateBook = ({book,updateBookStatues,searchFlag,books,thumb})=>{
                           }}
                         ></div>
                         
-                        <SelectOptions statues={book.shelf} book={book} updateBookStatues={updateBookStatues} searchFlag={searchFlag} books={books}/>
+                        <SelectOptions statues={book.shelf} book={book} updateBookStatues={updateBookStatues} Flag={Flag} books={books}/>
                       </div>
                       <div className="book-title">{book.title}</div>
                       <div className="book-authors">{book.authors}</div>
